@@ -1,0 +1,98 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f4f4f4;
+  }
+  
+  .calculator {
+    background-color: #333;
+    border-radius: 20px 20px 7px 7px;
+    padding: 20px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    display: grid;
+    grid-template-columns: repeat(4, 80px);
+    grid-template-rows: repeat(6, 80px);
+    gap: 10px;
+  }
+  
+  .display {
+    grid-column: span 4;
+    background-color: #222;
+    color: #fff;
+    font-size: 2.5rem;
+    text-align: right;
+    padding: 10px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+  }
+  
+  button {
+    background-color: #666;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;  
+    height: 100%; 
+    transition: background-color 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: #888;
+  }
+  
+  button:active {
+    transform: scale(0.98);
+  }
+  
+  #equals {
+    background-color: #f09a36;
+    grid-column: span 2;  
+  }
+  
+  #equals:hover {
+    background-color: #f4b260;
+  }
+  
+  #clear {
+    background-color: #e74c3c;
+    grid-column: span 2;  
+  }
+  
+  #clear:hover {
+    background-color: #f06a5d;
+  }
+  
+  #zero {
+    grid-column: span 2;  
+  }
+  
+  /* Ensure number buttons 1 to 9 have the same size */
+  #one, #two, #three, #four, #five, #six, #seven, #eight, #nine {
+    background-color: #4caf50;  /* Green background for numbers 1-9 */
+    color: white;
+    box-shadow: inset 0px -3px 0px #388e3c;  /* Add a shadow for depth */
+    transition: background-color 0.3s, box-shadow 0.2s;
+  }
+  
+  #one:hover, #two:hover, #three:hover, #four:hover, #five:hover, #six:hover, #seven:hover, #eight:hover, #nine:hover {
+    background-color: #66bb6a;  /* Lighter green on hover */
+    box-shadow: inset 0px -3px 0px #5dbe63;
+  }
+  
+  #one:active, #two:active, #three:active, #four:active, #five:active, #six:active, #seven:active, #eight:active, #nine:active {
+    transform: scale(0.98);
+    background-color: #388e3c;  /* Darker green on click */
+    box-shadow: none;
+  }
+  
